@@ -6,10 +6,10 @@ const Booking = () => {
     const { serviceId } = useParams();
     const [service, setService] = useState({});
     useEffect( () =>{
-        axios(`http://localhost:5000/services/${serviceId}`)
+        axios(`https://powerful-woodland-43158.herokuapp.com/${serviceId}`)
         .then( res =>{
             setService(res.data);
-        })
+        });
     } ,[])
     return (
         <div>

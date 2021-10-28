@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 const ManageServices = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
-        axios('http://localhost:5000/services')
+        axios('https://powerful-woodland-43158.herokuapp.com/services')
         .then(res =>{
             // console.log(res);
             setServices(res.data);
@@ -15,7 +15,7 @@ const ManageServices = () => {
      const handleDeleteUser = id =>{
         const proceed = window.confirm ("Are you sure you want to delete?")
         if(proceed){
-            const url = `http://localhost:5000/services/${id}`
+            const url =`https://powerful-woodland-43158.herokuapp.com/services/${id}`
         fetch(url, {
             method: "DELETE"
         })

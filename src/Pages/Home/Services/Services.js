@@ -6,7 +6,7 @@ import './Services.css';
 const Services = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
-        axios('http://localhost:5000/services')
+        axios('https://powerful-woodland-43158.herokuapp.com/services')
         .then(res =>{
             console.log(res);
             setServices(res.data);
